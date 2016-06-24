@@ -777,9 +777,16 @@ Ext.define('Ext.dd.DragDropManager', {
         var body = document.body,
             z,
             zIndex = -1;
+        var overTargetEl = element;
 
         element = Ext.getDom(element);
         while (element !== body) {
+            // this fixes the problem - Drag&Drop bug
+            if(!element) {
+                this._remove(overTargetEl); // remove the drop target from the manager
+                break;
+            }
+            // fix end
             if (!isNaN(z = Number(Ext.fly(element).getStyle('zIndex')))) {
                 zIndex = z;
             }
