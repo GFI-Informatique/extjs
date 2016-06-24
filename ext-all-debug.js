@@ -40658,7 +40658,7 @@ Ext.define('Ext.dd.DragDropManager', {
 
         element = Ext.getDom(element);
         while (element !== body) {
-            // this fixes the problem
+            // this fixes the problem - Drag&Drop bug
             if(!element) {
                 this._remove(overTargetEl); // remove the drop target from the manager
                 break;
