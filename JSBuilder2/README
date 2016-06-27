@@ -1,0 +1,9 @@
+JSBuilder is use to minify sources.
+If you modify some files.js --> build sources to create new ext-all.js or other.
+You need to complete / create your-project.jsb2 file to build.
+
+Web doc : 
+- http://wiip.fr/content/jsbuilder-2
+
+Example to use it in command line : 
+C:\WINDOWS\system32\java.exe -jar "C:\Program Files\JS Builder\JSBuilder2.jar" --projectFile C:\wamp\www\mon-projet\mon-projet.jsb2 --homeDir C:\wamp\www\mon-projet\
